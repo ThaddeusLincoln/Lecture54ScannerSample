@@ -41,6 +41,10 @@ public class Main {
 			System.out.println(language);
 		}
 		
+		// 3. convert list to array
+		String[] languagesArray = new String[languagesList.size()];
+		languagesArray = languagesList.toArray(languagesArray);
+		
 	}
 	
 	// the interesting is the use of java.util.Scanner 

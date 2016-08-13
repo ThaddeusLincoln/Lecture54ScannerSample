@@ -1,8 +1,10 @@
 package com.turing.jdev.scanner.sample;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 // A very simple sample where the interesting is the use of java.util.Scanner
+// and also the Arrays.copyOf
 public class Main {
 
 	private static Scanner scanner = new Scanner(System.in);
@@ -16,6 +18,11 @@ public class Main {
 		}
 		
 		System.out.println("The averae is " + getAverage(myIntegers));
+		
+		int[] aCopyOfTheIntegers = Arrays.copyOf(myIntegers, myIntegers.length);
+		for(int i = 0; i < aCopyOfTheIntegers.length; i++){
+			System.out.println("Element " + i + " typed value " + aCopyOfTheIntegers[i]);
+		}
 		
 	}
 	

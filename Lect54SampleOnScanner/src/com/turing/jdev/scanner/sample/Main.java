@@ -1,6 +1,8 @@
 package com.turing.jdev.scanner.sample;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 // A very simple sample where the interesting is the use of java.util.Scanner
@@ -22,6 +24,21 @@ public class Main {
 		int[] aCopyOfTheIntegers = Arrays.copyOf(myIntegers, myIntegers.length);
 		for(int i = 0; i < aCopyOfTheIntegers.length; i++){
 			System.out.println("Element " + i + " typed value " + aCopyOfTheIntegers[i]);
+		}
+		
+		// Also how to create an ArrayList from another array
+		List<String> languagesList = new ArrayList<String>();
+		languagesList.add("Java");
+		languagesList.add("C#");
+		
+		// 1.
+		ArrayList<String> newArray = new ArrayList<String>();
+		newArray.addAll(languagesList);
+		
+		// 2.
+		ArrayList<String> nextArray = new ArrayList<String>(languagesList);
+		for(String language : nextArray){
+			System.out.println(language);
 		}
 		
 	}
